@@ -9,7 +9,5 @@ png("plot2.png",width=480,height=480)
 xrange <- range(tidyData$Etime)
 yrange <- range(tidyData$Global_active_power)
 
-plot(xrange, yrange, xlab="", ylab="Global Active Power (kilowatts)" )
-lines(tidyData$Etime, tidyData$Global_active_power, lwd=1 )
-legend("")
+plot(tidyData$Etime, tidyData$Global_active_power, lwd=1 , ylim=yrange, type="l", xlab="", ylab="Global Active Power (kilowatts)" )
 dev.off()
